@@ -19,9 +19,12 @@ private:
 public:
 	List_1();
 	List_1(const List_1& other);
+	/*Встреча № 18  5. конструктор с перемещением;*/
+	List_1(List_1&& other)noexcept;
 	//6. перегрузку оператора присваивани¤;
 	List_1& operator=(const List_1& other);
-
+	/*Встреча № 18 6. перегрузку оператора присваивания(= ) с перемещением;*/
+	List_1& operator=(List_1&& other)noexcept;
 	void push_back(const char& data);
 	void push_front(const char& data);
 	//1. метод удалени¤ последнего элемента списка;
@@ -42,6 +45,10 @@ public:
 	void insert_elem_by_index(const int& index);
 	//13. метод, удал¤ющий элемент списка по переданной позиции.
 	void erase_by_index(const int& index);
+
+	    /*Встреча № 18_1.добавление элемента(значение передается вторым параметром) до элемента списка со
+		  значением первого параметра;*/
+	void insert_data_before_index(const int& index, const char& data);
 
 	int get_count()const { return count; }
 
@@ -68,6 +75,7 @@ public:
 	List_1 operator*(const List_1& other)const;
 	//5. перегрузку оператора << ;
 	friend ostream& operator <<(ostream& out, const List_1& obj);
-
+	/*Встреча № 18 4. перегрузку оператора >> для ввода данных одного элемента;*/
+	friend istream& operator >>(istream& in, List_1& obj);
 	~List_1();
 };

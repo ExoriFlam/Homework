@@ -22,6 +22,13 @@ List_1::List_1(const List_1& other)
 	
 }
 
+List_1::List_1(List_1&& other)noexcept
+{
+	this->count = other.count;
+	this->head = other.head;
+	other.head = nullptr;
+}
+
 List_1& List_1::operator=(const List_1& other)
 {
 	if (this == &other) return *this;
@@ -51,6 +58,20 @@ List_1& List_1::operator=(const List_1& other)
 			other_current = other_current->next;
 		}
 	}
+
+	return *this;
+}
+
+List_1& List_1::operator=(List_1&& other)noexcept
+{
+	if (this == &other) return *this;
+
+	this->clear();
+	this->count = other.count;
+	this->head = other.head;
+	other.head = nullptr;
+	other.count = 0;
+
 
 	return *this;
 }
@@ -163,8 +184,9 @@ void List_1::insert_after_data(const char& after, const char& src)
 
 		add->next = current->next;
 		current->next = add;
+		count++;
 	}
-
+	
 
 }
 
@@ -326,6 +348,38 @@ void List_1::erase_by_index(const int& index)
 	count--;
 }
 
+void List_1::insert_data_before_index(const int& index, const char& data)
+{
+	if (index < 0 || index >= count) return;
+
+	if (index == 1)
+	{
+		this->push_front(data);
+		return;
+	}
+
+
+	Element* current = this->head;
+	int cnt = 0;
+
+	while (current)
+	{
+		if (cnt == index - 2) break;
+		cnt++;
+		current = current->next;
+	}
+
+	if (current && current->next)
+	{
+		Element* add = new Element;
+		add->data = data;
+		add->next = current->next;
+		current->next = add;
+		count++;
+	}
+
+}
+
 
 bool List_1::containe(const char& data) const
 {
@@ -415,7 +469,6 @@ List_1 List_1::operator+(const List_1& other) const
 	{
 		temp.push_back(other_current->data);
 		other_current = other_current->next;
-		temp.count++;
 	}
 	
 	return temp;
@@ -500,4 +553,13 @@ ostream& operator<<(ostream& out, const List_1& obj)
 
 
 	return out;
+}
+
+istream& operator>>(istream& in, List_1& obj)
+{
+	char input;
+	cout << "\nДобавление в начало списка. Введите символ :";
+	in >> input;
+	obj.push_front(input);
+	return in;
 }
