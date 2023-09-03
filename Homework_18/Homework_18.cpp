@@ -37,10 +37,15 @@ void show(const ListTwo& int_list,const ListTwoTemplate<Coord>& coord_list)
     line += '\n';
 
     cout << '\n' << int_list;
+    int_list.show();
     cout << "\nКолличество элементов в списке int_list: " << int_list.get_count() << '\n';
+    
 
     cout << '\n' << coord_list;
-    cout << "\nКолличество элементов в списке coord_list: " << coord_list.get_count() << '\n' << line;
+    coord_list.show();
+    cout << "\nКолличество элементов в списке coord_list: " << coord_list.get_count() << '\n';
+    
+    cout << line;
 }
 
 int main()
