@@ -1,1 +1,9 @@
-Marks - котик
+apple - €блоко
+bird - птица
+cat - кошка
+dog - собака
+evening - вечер
+fish - рыба
+lion - лев
+roof - крыша
+window - окно

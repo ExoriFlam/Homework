@@ -7,13 +7,13 @@ DictionaryConsole::DictionaryConsole() : hConsole(GetStdHandle(STD_OUTPUT_HANDLE
 
 void DictionaryConsole::init()
 {
-    menu[0] = "    Р”РѕР±Р°РІРёС‚СЊ РїРµСЂРµРІРѕРґ.    ";
-    menu[1] = "  РџРѕРєР°Р·Р°С‚СЊ РІРµСЃСЊ СЃР»РѕРІР°СЂСЊ. ";
-    menu[2] = "    РџРѕРёСЃРє РІ СЃР»РѕРІР°СЂРµ.     ";
-    menu[3] = "   Р—Р°РїРёСЃР°С‚СЊ РІ С„Р°Р№Р» РўXРў.  ";
-    menu[4] = "   Р—Р°РїРёСЃР°С‚СЊ РІ С„Р°Р№Р» BIN.  ";
-    menu[5] = "    РџРѕРєР°Р·Р°С‚СЊ РўРҐРў С„Р°Р№Р»    ";
-    menu[6] = "         Р’С‹С…РѕРґ.          ";
+    menu[0] = "    Добавить перевод.    ";
+    menu[1] = "  Показать весь словарь. ";
+    menu[2] = "    Поиск в словаре.     ";
+    menu[3] = "   Записать в файл ТXТ.  ";
+    menu[4] = "   Записать в файл BIN.  ";
+    menu[5] = "    Показать ТХТ файл    ";
+    menu[6] = "         Выход.          ";
 }
 
 void DictionaryConsole::draw_menu()
@@ -81,12 +81,12 @@ void DictionaryConsole::choice(bool prm)
             system("cls");
             set_color(14);
             setcur(9, 6);
-            cout << "Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РЅР° Р°РЅРіР»РёР№СЃРєРѕРј.   \n\t>";
+            cout << "Введите слово на английском.   \n\t>";
             cin >> eng;
 
             system("cls");
             setcur(9, 6);
-            cout << "Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РЅР° СЂСѓСЃСЃРєРѕРј.      \n\t>";
+            cout << "Введите слово на русском.      \n\t>";
             cin >> ru;
             system("cls");
            
@@ -95,7 +95,7 @@ void DictionaryConsole::choice(bool prm)
         {
             system("cls");
             setcur(9, 6);
-            cout << "Р”Р°РЅРЅРѕРµ СЃР»РѕРІРѕ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.   \n\t>";
+            cout << "Данное слово уже существует.   \n\t>";
             _getch();
             system("cls");
         }
@@ -120,14 +120,14 @@ void DictionaryConsole::choice(bool prm)
         {
             system("cls");
             setcur(9, 6);
-            cout << "Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РґР»СЏ РїРѕРёСЃРєР° РїРµСЂРµРІРѕРґР°     \n\t> ";
+            cout << "Введите слово для поиска перевода     \n\t> ";
             cin >> eng;
            
         }
         else
         {
             setcur(1, 8);
-            cout <<"РїРµСЂРµРІРѕРґ: "<< ru;
+            cout <<"перевод: "<< ru;
             _getch();
             system("cls");
         }
@@ -145,13 +145,13 @@ void DictionaryConsole::choice(bool prm)
         if (prm)
         {
             setcur(9, 6);
-            cout << "Р¤Р°Р№Р» СѓСЃРїРµС€РЅРѕ Р·Р°РїРёСЃР°РЅ РІ С„РѕСЂРјР°С‚Рµ TXT.";
+            cout << "Файл успешно записан в формате TXT.";
             Sleep(1500);
         }
         else
         {
             setcur(9, 6);
-            cout << "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РїРёСЃР°С‚СЊ С„Р°Р№Р».";
+            cout << "Не удалось записать файл.";
             Sleep(1500);
         }
         system("cls");
@@ -166,13 +166,13 @@ void DictionaryConsole::choice(bool prm)
         if (prm)
         {
             setcur(9, 6);
-            cout << "Р¤Р°Р№Р» СѓСЃРїРµС€РЅРѕ Р·Р°РїРёСЃР°РЅ РІ С„РѕСЂРјР°С‚Рµ TXT.";
+            cout << "Файл успешно записан в формате TXT.";
             Sleep(1500);
         }
         else
         {
             setcur(9, 6);
-            cout << "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РїРёСЃР°С‚СЊ С„Р°Р№Р».";
+            cout << "Не удалось записать файл.";
             Sleep(1500);
         }
         system("cls");
@@ -196,7 +196,7 @@ void DictionaryConsole::choice(bool prm)
             system("cls");
             set_color(14);
             setcur(9, 6);
-            cout << "Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹.";
+            cout << "Завершение работы.";
             Sleep(3000);
             exit(0);
         }

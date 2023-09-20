@@ -1,0 +1,18 @@
+Login:     marks
+Password:  1234
+Email:     marks_ne@a_koshka.ru
+Name:      marksik
+Surname:   kishka
+Date of birthday: | 31 : 3 : 2017 | 
+Список сообщений:  
+Все хорошо! У нас тут котлетки
+======================================
+Login:     barsik
+Password:  1234
+Email:     barsik@mail.com
+Name:      bars
+Surname:   kotov
+Date of birthday: | 11 : 11 : 1999 | 
+Список сообщений:  
+Привет Барсик! Как дела на улице?
+======================================

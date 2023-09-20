@@ -31,7 +31,8 @@ private:
 	Node* search(Node* node, const MyString& data)const;
 	void save_to_txt(Node* node, FILE* file)const;
 	void save_to_bin(Node* node, FILE* file)const;
-	MyString get_data(Node* node, MyString data)const;
+	MyString get_data(Node* node,const MyString data)const;
+
 public:
 
 	EngRusTree();

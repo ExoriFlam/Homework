@@ -1,0 +1,6 @@
+Surname: Astafieva
+Name:    Tatiana
+Age:     20
+Vuz:     Step
+Marks:   11 9 8 7 6 
+Subjects:python C++ C ASM 
