@@ -260,7 +260,7 @@ Date& Date::operator+=(int _days)
 
 bool Date::operator>(const Date& other) const
 {
-	//return (int)*this > (int)other;// приводим оба объекта к инту и сравниваем но получаетс¤ затратно.
+	//return (int)*this > (int)other;// приводим оба объекта к инту и сравниваем но получаетс§ затратно.
 	if (year > other.year)return true;
 	if (year < other.year)return false;
 	if (month > other.month)return true;
@@ -374,7 +374,7 @@ void Date::set_date(const char* date_in_str)
 	}
 	else
 	{
-		cout << "\nпустая строка.";
+		cout << "\nпуста¤ строка.";
 		
 	}
 	
@@ -386,7 +386,7 @@ const char* Date::get_month_in_str()const
 	switch (this->month)
 	{
 	case 1:
-		return "январь";
+		return "¤нварь";
 	case 2:
 		return "февраль";
 	case 3:
@@ -402,11 +402,11 @@ const char* Date::get_month_in_str()const
 	case 8:
 		return "август";
 	case 9:
-		return "сент¤брь";
+		return "сент§брь";
 	case 10:
-		return "окт¤брь";
+		return "окт§брь";
 	case 11:
-		return "ноябрь";
+		return "но¤брь";
 	case 12:
 		return "декабрь";
 	default:
@@ -433,13 +433,13 @@ ostream& operator<<(ostream& out, const Date& obj)
 istream& operator>>(istream& in, Date& obj)
 {
 	
-	cout << "\n¬ведите ƒень :  ";
+	cout << "\nђведите ?ень :  ";
 	obj.day = obj.check_input<int>();
 	
-	cout << "\n¬ведите ћес¤ц:  ";
+	cout << "\nђведите Юес§ц:  ";
 	obj.month= obj.check_input<int>();
 
-	cout << "\n¬ведите √од  :  ";
+	cout << "\nђведите vод  :  ";
 	obj.year = obj.check_input<int>();
 
 	return in;
