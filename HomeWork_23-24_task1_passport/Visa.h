@@ -35,14 +35,14 @@ struct visa
 	friend ostream& operator<<(ostream& out, const visa obj)
 	{
 		out << "\n=================";
-		out << "\nÄàòà âúåçäà......:" << obj.entry.date_entrance;
-		out << "\nÍàçâàíèå òàìîæíèè:" << obj.entry.customs_name;
-		out << "\nÒèï òðàíñïîðòà...:" << obj.entry.transport_type;
+		out << "\nÐ”Ð°Ñ‚Ð° Ð²ÑŠÐµÐ·Ð´Ð°......:" << obj.entry.date_entrance;
+		out << "\nÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð¼Ð¾Ð¶Ð½Ð¸Ð¸:" << obj.entry.customs_name;
+		out << "\nÐ¢Ð¸Ð¿ Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚Ð°...:" << obj.entry.transport_type;
 		
 
-		out << "\nÄàòà âûåçäà......:" << obj.exit.date_exit;
-		out << "\nÍàçâàíèå òàìîæíèè:" << obj.exit.customs_name;
-		out << "\nÒèï òðàíñïîðòà...:" << obj.exit.transport_type;
+		out << "\nÐ”Ð°Ñ‚Ð° Ð²Ñ‹ÐµÐ·Ð´Ð°......:" << obj.exit.date_exit;
+		out << "\nÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð¼Ð¾Ð¶Ð½Ð¸Ð¸:" << obj.exit.customs_name;
+		out << "\nÐ¢Ð¸Ð¿ Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚Ð°...:" << obj.exit.transport_type;
 		out << "\n=================\n";
 		return out;
 	}
