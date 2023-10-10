@@ -22,8 +22,9 @@ int main()
 
     ForeignPassport passport_1("Miller", "Hans", 'm',"German","12.01.1985","15.01.2001","15.01.2021","AB0094234");
     passport_1.add_visa(visa_md);
-   
-    passport_1.show();
+    ListTwoTemplate<ForeignPassport> at;
+    at.push_back(passport_1);
+    cout << at;
 
     system("pause");
 }

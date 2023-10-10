@@ -801,7 +801,7 @@ ostream& operator<<(ostream& out, const ListTwoTemplate<Type>& obj)
 		NodeT<Type>* current = obj.head;
 		while (current)
 		{
-			out << current->data << " ";
+			out << current->data << " "; // fix
 			current = current->next;
 		}
 		out << endl;
